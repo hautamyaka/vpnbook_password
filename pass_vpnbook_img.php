@@ -53,7 +53,7 @@ for ($k = 0; $k < $maxchar ; $k++) {
       $tempchar = (mt_rand(0, 1))? 'u': 'y';
       //$tempchar = (time() / 60 % 60 % 2)? 'u': 'y';
     elseif ($tempchar==' ') break;
-    $ntempchar = rtrim($tempchar," \t\n\r\0\x0B\n");
+    $ntempchar = rtrim($tempchar," \t\n\r\0\x0B");
 //-----------------------------------------------------------------------
     print($ntempchar);
 }
@@ -66,4 +66,3 @@ imagedestroy($imgDict);
 imagedestroy($imgOCR);
 imagedestroy($imgBox);
 ?>
-
