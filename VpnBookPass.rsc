@@ -41,8 +41,8 @@
     :put "$[/system clock get time] - Delay start"
     :delay 15
     :put "$[/system clock get time] - Delay end"
-    :if ([/interface pptp-client get $VPNBookpIfName running]) do={
-      /tool fetch url=("https://api.telegram.org/bot$TToken/sendmessage\?chat_id=$TChatId&text=$sysname, VPNBook: Attempt to connect to: ".($VPNBookServerAddresses->$VPNBookServerIndex).". Password: $VPNBookPass") keep-result=no
-    }  
+#    :if ([/interface pptp-client get $VPNBookpIfName running]) do={
+#      /tool fetch url=("https://api.telegram.org/bot$TToken/sendmessage\?chat_id=$TChatId&text=$sysname, VPNBook: Attempt to connect to: ".($VPNBookServerAddresses->$VPNBookServerIndex).". Password: $VPNBookPass") keep-result=no
+#    }  
   }
 }
