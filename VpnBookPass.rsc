@@ -14,8 +14,6 @@
 :global VPNBookPass
 :global VPNBookRun
 :global sysname [/system identity get name]
-:global TToken "633000577:AAHTeeee5ebPf_M77omDrrrrrjHl5Dskhhw"
-:global TChatId "724563490"
 
 :global VPNBookServerIndex
 :if ([:typeof $VPNBookServerIndex] != "num") do={:set VPNBookServerIndex 0}
@@ -41,8 +39,5 @@
     :put "$[/system clock get time] - Delay start"
     :delay 15
     :put "$[/system clock get time] - Delay end"
-#    :if ([/interface pptp-client get $VPNBookpIfName running]) do={
-#      /tool fetch url=("https://api.telegram.org/bot$TToken/sendmessage\?chat_id=$TChatId&text=$sysname, VPNBook: Attempt to connect to: ".($VPNBookServerAddresses->$VPNBookServerIndex).". Password: $VPNBookPass") keep-result=no
-#    }  
   }
 }
